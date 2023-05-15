@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="app.css">
+    <title>Pune House Rent Prediction</title>
+</head>
+
+<body>
+    <div class="container"></div>
+
+    <div class="content">
+        <div class="heading">
+            <b>House Rent Prediction </b>
+            <br>
+        </div>
+        <div class="subheading">with Machine Learning [ for PUNE city ]</div>
+        <br>
+        <div class="forms">
+            <div class="group">
+                <div class="feature">
+                    <h2>Location</h2>
+                    <div>
+                        <select class="location" name="" id="uiLocations">
+                            <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h2>BHK</h2>
+                    <div class="switch-field">
+                        <input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+                        <label for="radio-bhk-1">1</label>
+                        <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked />
+                        <label for="radio-bhk-2">2</label>
+                        <input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+                        <label for="radio-bhk-3">3</label>
+                        <input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+                        <label for="radio-bhk-4">4</label>
+                        <input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+                        <label for="radio-bhk-5">5</label>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h2>Bath</h2>
+                    <div class="switch-field">
+                        <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+                        <label for="radio-bath-1">1</label>
+                        <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked />
+                        <label for="radio-bath-2">2</label>
+                        <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+                        <label for="radio-bath-3">3</label>
+                        <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+                        <label for="radio-bath-4">4</label>
+                        <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+                        <label for="radio-bath-5">5</label>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h2>Area (Square Feet)</h2>
+                    <input class="area" type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="feature">
+                    <h2>Floor no.</h2>
+                    <div>
+                        <select class="floor" name="" id="uifloor_number">
+                            <option value="" disabled="disabled" selected="selected">Choose the Floor no.</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h2>Type</h2>
+                    <div>
+                        <select class="type" name="" id="uitype">
+                            <option value="" disabled="disabled" selected="selected">Choose the Type</option>
+                            <option>Furnished</option>
+                            <option>Semifurnished</option>
+                            <option>Unfurnished</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="feature">
+                    <h2>Age (years old)</h2>
+                    <div class="switch-field">
+                        <input type="radio" id="radio-age-1" name="uiAge" value="1" />
+                        <label for="radio-age-1">0-1</label>
+                        <input type="radio" id="radio-age-2" name="uiAge" value="2" checked />
+                        <label for="radio-age-2">1-5</label>
+                        <input type="radio" id="radio-age-3" name="uiAge" value="3" />
+                        <label for="radio-age-3">5-10</label>
+                        <input type="radio" id="radio-age-4" name="uiAge" value="4" />
+                        <label for="radio-age-4">10+</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+        
+        <div id="uiEstimatedPrice" class="result">
+            <h2></h2>
+        </div>
+
+    </div>
+</body>
+
+</html>
